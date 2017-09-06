@@ -1,0 +1,29 @@
+<h2>
+  ACME - REGISTER A CLIENT
+</h2>
+<div *ngIf="returnMsg">
+  <div *ngIf="returnMsg.type === 'E'" class="isa_error">
+    <i class="fa fa-times-circle"></i> {{returnMsg.message}}
+  </div>
+  <div *ngIf="returnMsg.type === 'S'" class="isa_success">
+    <i class="fa fa-check"></i> {{returnMsg.message}}
+  </div>
+</div>
+<div class="form-style-5">
+  <fieldset>
+    <div>
+      <label>Client Name:</label>
+      <input type="text" [(ngModel)]="client.name">
+    </div>
+    <div>
+      <label>Client Birth Date:</label>
+      <input type="date" [(ngModel)]="client.birthDate">
+    </div>
+    <div>
+      <label>Client User name:</label>
+      <input type="text" [(ngModel)]="client.userName">
+    </div>
+  </fieldset>
+  <button (click)='saveClient()'>Save</button>
+  <button (click)='deleteClient()'>Delete</button>
+</div>

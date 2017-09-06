@@ -1,0 +1,44 @@
+<h2>ACME - CLIENTS LIST</h2>
+<div class="container">
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Birth Date</th>
+          
+        </tr>
+      </thead>
+      <tbody *ngFor="let client of clients">
+        <tr>
+          <td>
+            {{client.name}}
+          </td>
+          <td>
+            {{client.userName}}
+          </td>
+          <td>
+            {{client.birthDate}}
+          </td>
+          <td>
+           
+          </td>
+          <td>
+            
+            <button>
+              <a [routerLink]="['/detail', client.id]">
+                Details
+              </a> 
+            </button>
+             
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+</div>
